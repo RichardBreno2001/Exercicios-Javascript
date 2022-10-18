@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         p#x1 {
+            display:none;
+            background-color: grey;
+            width: 400px;
+            color: white;
+            box-shadow: 2px 5px 5px black;
+            padding: 10px;
+            text-align: center;
+            margin-left: 50px;
+         }
+         p#x2 {
+            display: none;
+            background-color: grey;
+            color: white;
+            width: 400px;
+            box-shadow: 2px 5px 5px black;
+            padding: 10px;
+            text-align: center;
+            margin-left: 50px;
+         }
+         h1 {
+            display:block;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>bhaskara com javascript</h1>
+    </header>
+    <main>
+        <label for="n1">Diga o valor de a:</label>
+        <input type="number" id="n1" required>
+        <label for="n2">Diga o valor de b:</label>
+        <input type="number" id="n2" required>
+        <label for="n3">Diga o valor de c:</label>
+        <input type="number" id="n3" required>
+        <input type="button" id="bot" value="calcular" onclick="clicar()">
+        <div>
+            <h1 id="res">RESULTADO</h1>
+            <p id="x1"></p>
+            <p id="x2"></p>
+        </div>
+
+    </main>
+    <script>
+        function clicar () {
+        var vn1 = window.document.querySelector('input#n1')
+        var vn2 = window.document.querySelector('input#n2')
+        var vn3 = window.document.querySelector('input#n3')
+        var resultado = window.document.querySelector('h1#res')
+        var r1 = window.document.querySelector('p#x1')
+        var r2 = window.document.querySelector('p#x2')
+        var numeroa = Number(vn1.value)
+        var numerob = Number(vn2.value)
+        var numeroc = Number(vn3.value)
+        var delta = numerob**2 - 4*numeroa*numeroc 
+        var raizdelta = delta ** (1/2)
+        var va1 = (-(numerob) + raizdelta) / 2*numeroa 
+        var va2 = (-(numerob) - raizdelta) / 2*numeroa
+                if (raizdelta < 0) {
+                    resultado.innerHTML = `DELTA NEGATIVO`
+
+                } else {
+                    resultado.style.display = 'none'
+                    r1.style.display = 'block'
+                    r2.style.display = 'block'
+                    r1.innerHTML = `A primeira raíz vale ${va1}`
+                    r2.innerHTML = `A segunda raíz vale ${va2}`
+                }
+
+
+
+        }
+
+    </script>
+</body>
+</html>
