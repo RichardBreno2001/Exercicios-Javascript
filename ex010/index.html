@@ -17,9 +17,10 @@
         </div>
         <script>
             function clicar() {
-            let valorJantar = window.document.getElementById('vjant').value;
-            let txpgar = (valorJantar * 10)/100
-            let total = valorJantar + txpgar
+            let valorJantar = window.document.getElementById('vjant')
+            let vlrjnt = Number(valorJantar.value)
+            let txpgar = (vlrjnt * 10)/100
+            let total = vlrjnt + txpgar
             let resultado = window.document.getElementById('res')
             res.innerHTML = `A taxa do garçom é de ${txpgar} reais e o valor total a ser pago é de ${total} reais.`
             }
