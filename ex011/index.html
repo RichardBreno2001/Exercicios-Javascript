@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #res {
+            background-color: blue;
+            height: 100px;
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <h1>Preço do produto</h1>
+        <form autocomplete="off" method="get">
+            <label for="prec">Preço:</label>
+            <input type="number" id="prec">
+            <input type="button" value="Ver preços" id="btn" onclick="clicar()">
+        </form>
+        <div id="res">
+
+        </div>
+    </main>
+    <script>
+        function clicar() { 
+            var preco = window.document.getElementById('prec')
+            var precoN = Number(preco.value)
+            var precoDesc = (precoN * 10) / 100 
+            var valorTotal = PrecoN - precoDesc 
+            var Parcelado = precoN / 3  
+            var resul = window.document.querySelector('div#res')
+            resul.innerHTML = `O valor a vista com desconto de 10% é de ${valorTotal}  \n 
+            O valor parcelado em 3x é de ${Parcelado}`
+        }
+    </script>
 </body>
 </html>
