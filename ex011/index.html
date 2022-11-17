@@ -26,16 +26,18 @@
         </div>
     </main>
     <script>
-        function clicar() { 
-            var preco = window.document.getElementById('prec')
-            var precoN = Number(preco.value)
-            var precoDesc = (precoN * 10) / 100 
-            var valorTotal = PrecoN - precoDesc 
-            var Parcelado = precoN / 3  
-            var resul = window.document.querySelector('div#res')
-            resul.innerHTML = `O valor a vista com desconto de 10% é de ${valorTotal}  \n 
-            O valor parcelado em 3x é de ${Parcelado}`
+        function clicar() {
+            var resultado = window.document.querySelector('div#res')
+            var numero = window.document.querySelector('input#prec')
+            var preço = Number(numero.value)
+            var preçoDesc = (preço * 10) / 100
+            var preçoAvista = preço - preçoDesc
+            var parc = preço / 3
+            resultado.innerHTML = `Valor a vista :R$ ${preçoAvista}  Parcelado em 3x: R$ ${parc.toFixed(2)}`
+            resultado.style.fontSize = '2em'
+            resultado.style.color = 'white'
         }
+
     </script>
 </body>
 </html>
