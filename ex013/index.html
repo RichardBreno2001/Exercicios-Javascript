@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revenda de veículos JS</h1>
+    <div>
+        <label for="veic">Veículo:</label>
+        <input type="text" id="veic" name="veicN" required>
+        <label for="pre">Preço R$:</label>
+        <input type="number" id="pre" required min="0" step="500">
+        <input type="button" id="btn" value="Ver promoção">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        var btn = window.document.querySelector('#btn')
+        btn.addEventListener('click', clicar => {
+            var veiculo = window.document.querySelector('#veic').value 
+            var preço = window.document.querySelector('#pre').value
+            var ValorEntrada = (preço*50) / 100
+            var ValorRestante = (preço - ValorEntrada) / 12 
+            var resultado = window.document.getElementById('res')
+            resultado.innerHTML = `Promoção: <strong>${veiculo}</strong> Entrada de R$ ${ValorEntrada.toFixed(2)} +12x de RS${ValorRestante}.`
+        })
+    </script>
+    
+</body>
+</html>
