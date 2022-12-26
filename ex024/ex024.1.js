@@ -6,8 +6,11 @@ array.unshift('Testando')
 
 console.log(array)
 
-array.shift()
+let elementoRemovido = array.shift()
 
 console.log(array)
+console.log(elementoRemovido)
+
+
 
 
