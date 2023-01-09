@@ -10,3 +10,10 @@ console.log(converterParaString)
 
 //Convertendo JSON para string
 
+let converterParaJSON = JSON.parse(converterParaString)
+
+console.log(converterParaJSON)
+
+// Convertendo string para JSON
+
+
