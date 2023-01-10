@@ -15,4 +15,8 @@ let cachorro = {
 cachorro.setRaça('Pastor Alemão','Pitbull','Husk Siberiano')
 
 console.log(cachorro.getRaça())
+console.log(cachorro.Raças[2])
+
+
+
 
