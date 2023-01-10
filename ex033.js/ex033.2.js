@@ -12,7 +12,7 @@ let cachorro = {
 
 }
 
-cachorro.setRaça('Husk','Pitbull')
+cachorro.setRaça('Pastor Alemão','Pitbull','Husk Siberiano')
 
 console.log(cachorro.getRaça())
 
