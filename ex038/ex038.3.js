@@ -5,4 +5,3 @@ console.log(RegexPreciso.test('99999-9999')) // true
 console.log(RegexPreciso.test('999')) // false
 
 
-
